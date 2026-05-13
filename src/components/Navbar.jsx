@@ -17,8 +17,8 @@ export default function Navbar({ page, setPage }) {
   return (
     <nav className="navbar">
       <a className="nav-logo" onClick={() => setPage('home')}>
-        <div className="nav-logo-icon">⚡</div>
-        UI GAMES
+        <div className="nav-logo-icon"></div>
+        UI GAMES LEAGUE
       </a>
 
       <ul className="nav-links nav-links-desktop">

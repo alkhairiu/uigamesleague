@@ -60,69 +60,66 @@ export default function CompPage({ game, setPage }) {
     </div>
 
     {/* Kolom kanan - logo game */}
-    {game.logo && (
-      <div style={{ flex: 1, display: 'flex', justifyContent: 'center', alignItems: 'center', paddingRight: '48px' }}>
-        <img
-          src={game.logo}
-          alt={game.name}
-          style={{
-            width: '300px',
-            maxWidth: '90%',
-            mixBlendMode: 'screen',
-            filter: `drop-shadow(0 0 40px ${game.accent}cc)`,
-            
-          }}
-        />
-      </div>
-    )}
+  
 
-    {game.id === 'val' && (
-      <div style={{ flex: 1, display: 'flex', justifyContent: 'center', alignItems: 'center', paddingRight: '48px' }}>
-        <img
-          src="src/assets/image 3.png"
-          alt="Mobile Legends"
-          style={{
-            width: '300px',
-            maxWidth: '90%',
-            mixBlendMode: 'screen',
-            filter: `drop-shadow(0 0 40px ${game.accent}cc)`,
-            
-          }}
-        />
-      </div>
-    )}
-
-    {game.id === 'pubg' && (
-      <div style={{ flex: 1, display: 'flex', justifyContent: 'center', alignItems: 'center', paddingRight: '48px' }}>
-        <img
-          src="src/assets/image2.png"
-          alt="Mobile Legends"
-          style={{
-            width: '300px',
-            maxWidth: '90%',
-            mixBlendMode: 'screen',
-            filter: `drop-shadow(0 0 40px ${game.accent}cc)`,
-            
-          }}
-        />
-      </div>
-    )}
-
-    {game.id === 'pes' && (
-      <div style={{ flex: 1, display: 'flex', justifyContent: 'center', alignItems: 'center', paddingRight: '48px' }}>
-        <img
-          src="src/assets/image2.png"
-          alt="Mobile Legends"
-          style={{
-            width: '300px',
-            maxWidth: '90%',
-            mixBlendMode: 'screen',
-            filter: `drop-shadow(0 0 40px ${game.accent}cc)`,
-            
-          }}
-        />
-      </div>
-    )}
+    {/* Letakkan ini di luar kondisi individual, sebagai satu wrapper */}
+<div style={{ 
+  position: 'absolute', 
+  right: '80px',        // geser dari kanan
+  top: '50%', 
+  transform: 'translateY(-50%)',
+  display: 'flex',
+  alignItems: 'center'
+}}>
+  {game.id === 'ml' && (
+    <img
+      src="src/assets/image2.png"
+      alt="Mobile Legends"
+      style={{
+        width: '250px',
+        maxWidth: '90%',
+        mixBlendMode: 'screen',
+        filter: `drop-shadow(0 0 40px ${game.accent}cc)`,
+      }}
+    />
+  )}
+  {game.id === 'val' && (
+    <img
+      src="src/assets/image 3.png"
+      alt="Valorant"
+      style={{
+        width: '300px',
+        maxWidth: '90%',
+        mixBlendMode: 'screen',
+        filter: `drop-shadow(0 0 40px ${game.accent}cc)`,
+      }}
+    />
+  )}
+  {game.id === 'pubg' && (
+    <img
+      src="src/assets/image 4.png"
+      alt="PUBG"
+      style={{
+        width: '300px',
+        maxWidth: '90%',
+        mixBlendMode: 'screen',
+        filter: `drop-shadow(0 0 40px ${game.accent}cc)`,
+      }}
+    />
+  )}
+  {game.id === 'pes' && (
+    <img
+      src="src/assets/image 5.png"
+      alt="PES"
+      style={{
+        width: '300px',
+        maxWidth: '90%',
+        mixBlendMode: 'screen',
+        filter: `drop-shadow(0 0 40px ${game.accent}cc)`,
+      }}
+    />
+  )}
+</div>
 
   </div>
 </div>
